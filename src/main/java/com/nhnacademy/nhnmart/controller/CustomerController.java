@@ -65,7 +65,7 @@ public class CustomerController {
         if (category.equals("all")) {
             return "redirect:/cs";
         }
-        List<Ask> asks = askService.getAskForSearch(id, category);
+        List<Ask> asks = askService.getAskForSearchService(id, category);
         model.addAttribute("asks", asks);
         model.addAttribute("category", category);
         model.addAttribute("categoryList", askService.getCategory());

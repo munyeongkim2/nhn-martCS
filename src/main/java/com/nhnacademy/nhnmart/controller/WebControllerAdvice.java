@@ -22,7 +22,6 @@ public class WebControllerAdvice{
         model.addAttribute("errorMessage", ex.getMessage());
         model.addAttribute("status", HttpStatus.NOT_FOUND);
 
-
         return "error";
     }
 

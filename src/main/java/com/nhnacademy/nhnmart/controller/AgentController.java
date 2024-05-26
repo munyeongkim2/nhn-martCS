@@ -28,15 +28,6 @@ import java.util.Map;
 @AllArgsConstructor
 public class AgentController {
     private final AskService askService;
-//    @ModelAttribute("id")
-//    public String addAttributes(HttpSession session) {
-//        User user = (User) session.getAttribute("user");
-//        String id = user.getId();
-//        if (id == null || id.isEmpty()) {
-//            throw new UserNotFoundException();
-//        }
-//        return id;
-//    }
 
     @GetMapping
     public String dashboardView(Model model) {
