@@ -118,7 +118,7 @@ class CustomerControllerTest {
         MockHttpSession session = new MockHttpSession();
         session.setAttribute("user", customer);
 
-        MockMultipartFile file = new MockMultipartFile("file", "", "text/plain", new byte[0]);
+        MockMultipartFile file = new MockMultipartFile("file", "iss.jpg", "img/jpeg", new byte[0]);
 
         mockMvc.perform(multipart("/cs/ask")
                         .file(file)
@@ -137,7 +137,7 @@ class CustomerControllerTest {
         MockHttpSession session = new MockHttpSession();
         session.setAttribute("user", customer);
 
-        MockMultipartFile file = new MockMultipartFile("file", "", "text/plain", new byte[0]);
+        MockMultipartFile file = new MockMultipartFile("file", "iss.text", "text/plain", new byte[0]);
 
         mockMvc.perform(multipart("/cs/ask")
                 .file(file)
